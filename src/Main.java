@@ -26,7 +26,7 @@ public class Main {
 //        set.deCaesar();
 
         // Encrypting the text using Trisemus Method
-        set.trisemus("Hello world", "database");
+        set.trisemus("attachment", "start");
         showMatrix(set.content());
 
 

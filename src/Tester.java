@@ -11,6 +11,7 @@ public class Tester {
 //        System.out.println(result.getResults());
 //        System.out.println(result.getTotal());
 
+
         String text = "watamelan";
         String a = 'a' + "";
         System.out.println(text);

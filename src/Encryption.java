@@ -234,12 +234,19 @@ public class Encryption {
     public String trisemus(String text, String key){
         // Creating new matrix using key word
         String left = String.copyValueOf(alphabet); // Combine char array back to String
-        int count = key.length();
-        for (int i = 0; i < count; i++) { // Placing letters from keyword first and deleting duplicates
-            matrix[i / 5][i % 5] = key.charAt(i); // Places letters of key word one by one
-            left = left.replaceAll(key.charAt(i) + "", "");
+        int count = 0;
+        for (int i = 0; key.length()!= 0; i++) { // Placing letters from keyword first and deleting duplicates
+            matrix[i / 5][i % 5] = key.charAt(0); // Places letters of key word one by one
+
+            System.out.print(key + " ");
+            System.out.print(key.charAt(0) + " ");
+            System.out.println(key.length() + " " + 0);
+
+            left = left.replaceAll(key.charAt(0) + "", "");
+            key = key.replaceAll(key.charAt(0) + "", "");
+            count++;
+
             System.out.println(left);
-            count = i;
         }
         for (int i = 0; i < left.length(); i++) {
             matrix[(i + count) / 5][(i + count) % 5] = left.charAt(i);
